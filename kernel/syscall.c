@@ -154,16 +154,6 @@ const char *sysnames[] = {
 
 void syscall(void)
 {
-  // int num;
-  // struct proc *p = myproc();
-  // num = p->trapframe->a7;
-  // if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
-  //   p->trapframe->a0 = syscalls[num]();
-  // } else {
-  //   printf("%d %s: unknown sys call %d\n",
-  //           p->pid, p->name, num);
-  //   p->trapframe->a0 = -1;
-  // }
   int num;
   struct proc *p = myproc();
   num = p->trapframe->a7; // 系统调用代号存在a7寄存器内
